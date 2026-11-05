@@ -2,7 +2,7 @@
 
 Is a large language model worth using for a simple text classification task, compared with a classical machine learning baseline?
 
-This project compares a TF-IDF + logistic regression model with a zero-shot LLM on the same set of banking customer messages, measuring quality, reliability of the output format, speed and token usage.
+This project compares a TF-IDF + logistic regression model with an LLM (zero-shot and two prompt variants) on the same set of banking customer messages, measuring quality, reliability of the output format, speed and token usage.
 
 ## Key results
 
@@ -48,23 +48,27 @@ With n = 200, the 95% confidence interval for accuracy is about ±3 percentage p
 - **The output format was reliable.** JSON mode plus validation gave 0 invalid answers out of 200.
 - **Takeaway:** for a narrow task with enough labelled data, a classical model is a strong and cheap default. An LLM becomes more attractive when labelled data is scarce, categories change often, or the task needs language understanding beyond keywords. Either way, it should be compared against a baseline on the same held-out data before it is used.
 
-## Prompt experiment: category descriptions
+## Prompt experiments
 
-**Hypothesis:** the LLM confuses `balance_not_updated_after_bank_transfer` and `transfer_not_received_by_recipient` because it only sees the label names. I added a one-sentence description of every category to the prompt. The descriptions were written from the label definitions, not copied from test messages.
+I tested two prompt changes against the zero-shot prompt, each on the same 200 test messages:
+
+- **Category descriptions:** a one-sentence description of every category, written from the label definitions (not from test messages). Hypothesis: the model confuses `balance_not_updated_after_bank_transfer` and `transfer_not_received_by_recipient` because it only sees the label names.
+- **Few-shot:** 2 randomly sampled training messages per category (20 examples) added to the prompt.
 
 | Variant | Accuracy | Errors | Transfer-pair errors | Invalid | Avg tokens per text | Avg time per text |
 | --- | --- | --- | --- | --- | --- | --- |
 | Zero-shot | 0.930 | 14 | 9 | 0 | 290 | 0.52 s |
 | With category descriptions | 0.935 | 13 | 5 | 0 | 455 | 0.87 s |
+| Few-shot (2 examples per class) | 0.925 | 15 | 8 | 1 | 759 | 0.40 s |
 
-- **The targeted confusion almost halved** (9 → 5 errors).
-- **But new errors appeared elsewhere:** the descriptions fixed 4 messages and broke 3, so overall accuracy barely moved.
-- **Not significant:** McNemar's exact test on the 7 messages where the two variants disagree gives p = 1.0.
-- **Cost went up:** +57% tokens and +67% latency per message.
+- **Descriptions almost halved the targeted confusion** (9 → 5 errors), but fixed 4 messages and broke 3 others, so overall accuracy barely moved. McNemar's exact test on the 7 messages where the variants disagree: p = 1.0.
+- **Few-shot did not help:** accuracy fell by one message, the transfer-pair confusion stayed (8 errors) and it produced the first invalid answer. Random examples do not target the categories the model actually confuses. Compared with zero-shot, few-shot fixed 3 messages and broke 4 (McNemar p = 1.0); the new errors include two declined payments labelled as pending and "Are you able to locate my card?" labelled as card_arrival.
+- **Cost:** descriptions add 57% tokens per message, few-shot 162%. The lower few-shot latency comes from a run on a different day and reflects API load, not the prompt.
+- **None of the differences is statistically significant.** On 200 messages, a change of one or two predictions is within noise.
 
-**Takeaway:** a prompt change aimed at one error type can shift errors to other classes. Evaluating only the problem being fixed would have overstated the improvement, which is why every variant is measured on the full test set.
+**Takeaway:** a prompt change aimed at one error type can shift errors to other classes, and more context (more tokens) does not guarantee better answers. Evaluating only the problem being fixed would have overstated the improvement, which is why every variant is measured on the full test set against the same baseline. For this task the classical baseline remains the better choice.
 
-**Caveat:** the descriptions were designed after looking at errors on this test sample, so the result should be confirmed on a fresh sample.
+**Caveat:** the descriptions were designed after looking at errors on this test sample, so that result should be confirmed on a fresh sample.
 
 ## Limitations
 
@@ -76,7 +80,7 @@ With n = 200, the 95% confidence interval for accuracy is about ±3 percentage p
 
 ## Next steps
 
-- Few-shot prompting: add 1–2 training examples per category and compare with the variants above.
+- Few-shot with targeted examples: pick training examples for the two confused transfer categories instead of random ones.
 - Confirm the prompt results on a fresh sample of test messages.
 - Compare a smaller model (`openai/gpt-oss-20b`) and a model running locally.
 - Estimate the cost of each approach at scale (for example, 1 million messages per month) from the measured token usage.
@@ -87,7 +91,8 @@ With n = 200, the 95% confidence interval for accuracy is about ±3 percentage p
 ├── data/
 │   ├── test_sample_200.csv            # fixed evaluation sample
 │   ├── llm_zero_shot_results.csv      # zero-shot LLM predictions, latency and tokens
-│   └── llm_descriptions_results.csv   # prompt with category descriptions
+│   ├── llm_descriptions_results.csv   # prompt with category descriptions
+│   └── llm_few_shot_results.csv       # prompt with 2 examples per category
 ├── notebooks/
 │   ├── 01_baseline.ipynb              # TF-IDF + logistic regression
 │   ├── 02_llm_zero_shot.ipynb         # zero-shot LLM classification and evaluation
