@@ -48,16 +48,36 @@ With n = 200, the 95% confidence interval for accuracy is about ±3 percentage p
 - **The output format was reliable.** JSON mode plus validation gave 0 invalid answers out of 200.
 - **Takeaway:** for a narrow task with enough labelled data, a classical model is a strong and cheap default. An LLM becomes more attractive when labelled data is scarce, categories change often, or the task needs language understanding beyond keywords. Either way, it should be compared against a baseline on the same held-out data before it is used.
 
+## Prompt experiment: category descriptions
+
+**Hypothesis:** the LLM confuses `balance_not_updated_after_bank_transfer` and `transfer_not_received_by_recipient` because it only sees the label names. I added a one-sentence description of every category to the prompt. The descriptions were written from the label definitions, not copied from test messages.
+
+| Variant | Accuracy | Errors | Transfer-pair errors | Invalid | Avg tokens per text | Avg time per text |
+| --- | --- | --- | --- | --- | --- | --- |
+| Zero-shot | 0.930 | 14 | 9 | 0 | 290 | 0.52 s |
+| With category descriptions | 0.935 | 13 | 5 | 0 | 455 | 0.87 s |
+
+- **The targeted confusion almost halved** (9 → 5 errors).
+- **But new errors appeared elsewhere:** the descriptions fixed 4 messages and broke 3, so overall accuracy barely moved.
+- **Not significant:** McNemar's exact test on the 7 messages where the two variants disagree gives p = 1.0.
+- **Cost went up:** +57% tokens and +67% latency per message.
+
+**Takeaway:** a prompt change aimed at one error type can shift errors to other classes. Evaluating only the problem being fixed would have overstated the improvement, which is why every variant is measured on the full test set.
+
+**Caveat:** the descriptions were designed after looking at errors on this test sample, so the result should be confirmed on a fresh sample.
+
 ## Limitations
 
 - Small test sample (200 messages), so only large differences are conclusive.
 - 10 of the 77 intents, English only.
-- One prompt and one LLM; results may differ with other prompts or models.
+- One LLM; results may differ with other models.
+- Prompt variants were designed after error analysis on the same sample (see caveat above).
 - The free-tier API may change models or limits over time.
 
 ## Next steps
 
-- Add short category descriptions or a few examples per category to the prompt (few-shot) and test whether the transfer confusion disappears.
+- Few-shot prompting: add 1–2 training examples per category and compare with the variants above.
+- Confirm the prompt results on a fresh sample of test messages.
 - Compare a smaller model (`openai/gpt-oss-20b`) and a model running locally.
 - Estimate the cost of each approach at scale (for example, 1 million messages per month) from the measured token usage.
 
@@ -65,11 +85,13 @@ With n = 200, the 95% confidence interval for accuracy is about ±3 percentage p
 
 ```
 ├── data/
-│   ├── test_sample_200.csv          # fixed evaluation sample
-│   └── llm_zero_shot_results.csv    # LLM predictions, latency and tokens
+│   ├── test_sample_200.csv            # fixed evaluation sample
+│   ├── llm_zero_shot_results.csv      # zero-shot LLM predictions, latency and tokens
+│   └── llm_descriptions_results.csv   # prompt with category descriptions
 ├── notebooks/
-│   ├── 01_baseline.ipynb            # TF-IDF + logistic regression
-│   └── 02_llm_zero_shot.ipynb       # zero-shot LLM classification and evaluation
+│   ├── 01_baseline.ipynb              # TF-IDF + logistic regression
+│   ├── 02_llm_zero_shot.ipynb         # zero-shot LLM classification and evaluation
+│   └── 03_prompt_variants.ipynb       # prompt experiments and comparison
 ├── requirements.txt
 └── README.md
 ```
@@ -86,7 +108,7 @@ With n = 200, the 95% confidence interval for accuracy is about ±3 percentage p
    ```
    GROQ_API_KEY=your_key_here
    ```
-3. Run the notebooks in order: `01_baseline.ipynb`, then `02_llm_zero_shot.ipynb`.
+3. Run the notebooks in order: `01_baseline.ipynb`, `02_llm_zero_shot.ipynb`, then `03_prompt_variants.ipynb`.
 
 ## Tools
 

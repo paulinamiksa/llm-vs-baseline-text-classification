@@ -1,0 +1,201 @@
+text,category,llm_label,seconds,in_tokens,out_tokens
+My bank transfer is still not showing up in my account.,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.6741657257080078,416,31
+"Could you please check one of my transfer which i made few hours ago from my UK bank account, as its not showing yet.",balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.3756985664367676,430,89
+"After the transfer, the balance did not update.",balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.5608320236206055,414,30
+I have completed a transfer but it is not showing up.,balance_not_updated_after_bank_transfer,transfer_not_received_by_recipient,0.4640328884124756,416,71
+When will my balance update after a transfer?,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.383206844329834,413,44
+Hello I made a bank transfer couple hours ago from my UK account but it doesn't show up yet. Can you please check if everything is alright with it?,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,1.025385856628418,435,35
+Why doesn't my balance reflect my transfer,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.4648866653442383,411,42
+I did a transfer to my account but it doesn't show up,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.15056324005126953,416,31
+When will I see my new balance after making my bank transfer?,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.4415924549102783,417,44
+The amount of time that transfers usually take from a UK account is what?I just completed a transfer and it is not showing up at all. I'm wondering at this point if everything is actually okay.,balance_not_updated_after_bank_transfer,transfer_not_received_by_recipient,0.5639419555664062,444,168
+The  money I transferred does not show in the balance.,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.46129417419433594,416,43
+I just completed a bank transfer and the balance didn't update,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.34603428840637207,415,31
+I made a transfer and am still waiting.,balance_not_updated_after_bank_transfer,transfer_not_received_by_recipient,0.5148282051086426,413,86
+My transfer is pending.,balance_not_updated_after_bank_transfer,transfer_not_received_by_recipient,0.5433857440948486,409,95
+I made a bank transfer and my account balance did not show it.,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.45171594619750977,418,30
+I didn't get the money I transferred,balance_not_updated_after_bank_transfer,transfer_not_received_by_recipient,0.547677755355835,411,64
+I had cash transferred but the balance did not change.,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.5103123188018799,415,30
+Why isn't the transfer on my account showing up?,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.5272138118743896,414,56
+I made a transfer a few hours ago from a UK banking account.  I do not yet see the transfer.  Please check on this for me.,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.3651754856109619,435,96
+Where is my transfer from [country]?,balance_not_updated_after_bank_transfer,balance_not_updated_after_bank_transfer,0.3745839595794678,412,46
+How long should my new card take to arrive?,card_arrival,card_arrival,0.15814423561096191,414,28
+How do I locate my card?,card_arrival,lost_or_stolen_card,0.2269001007080078,411,68
+I think something went wrong with my card delivery as I haven't received it yet.,card_arrival,card_arrival,0.1693408489227295,420,24
+My card has not arrived yet.,card_arrival,card_arrival,0.2500166893005371,411,28
+How do I know when my card will arrive?,card_arrival,card_arrival,0.39179301261901855,414,36
+Where is my new card? I have been waiting a week!,card_arrival,card_arrival,0.4402475357055664,417,28
+How do I track my card?,card_arrival,card_arrival,0.13023638725280762,411,24
+I'm still waiting on my card to be delivered.,card_arrival,card_arrival,0.13542604446411133,414,28
+"I have been waiting longer than expected for my bank card, could you provide information on when it will arrive?",card_arrival,card_arrival,0.4019491672515869,426,28
+I still don't have my card after 2 weeks.  What should I do?,card_arrival,card_arrival,0.16582775115966797,421,24
+I was expecting my new card and am wondering why I haven't received it yet?,card_arrival,card_arrival,0.13817620277404785,420,28
+Is it normal to have to wait over a week for my new card?,card_arrival,card_arrival,0.38970303535461426,419,39
+I ordered my card 2 weeks ago and it still isn't here? What do I do?,card_arrival,card_arrival,0.14652132987976074,423,28
+When will I get my card?,card_arrival,card_arrival,0.15787458419799805,411,24
+Status of the card I ordered.,card_arrival,card_arrival,0.17926597595214844,411,24
+My card hasn't arrived yet.,card_arrival,card_arrival,0.38247013092041016,410,22
+i want to track the card you sent,card_arrival,card_arrival,0.15347909927368164,412,34
+I ordered a card and I still haven't received it. It's been two weeks. What can I do?,card_arrival,card_arrival,0.42670226097106934,425,28
+Is there tracking info available?,card_arrival,card_arrival,0.4933640956878662,410,44
+"I'm starting to think my card is lost because it still hasn't arrived, can you help?",card_arrival,card_arrival,0.19711709022521973,422,43
+My card doesn't work.,card_not_working,card_not_working,0.2634561061859131,409,42
+My card does not work,card_not_working,card_not_working,0.4132204055786133,409,38
+Nothing goes through on my card.,card_not_working,card_not_working,0.16041231155395508,411,26
+My card won't work.,card_not_working,card_not_working,0.581273078918457,409,42
+My card doesn't accept any transaction at all. What's wrong??,card_not_working,card_not_working,0.12813019752502441,416,26
+How do I know why my card isn't working?,card_not_working,card_not_working,0.1752185821533203,414,26
+My card isn't working anymore.,card_not_working,card_not_working,0.13456463813781738,410,26
+I can't get my card to work.,card_not_working,card_not_working,0.16027450561523438,412,44
+Is my card broken?,card_not_working,card_not_working,0.1914222240447998,409,26
+My card broke.,card_not_working,card_not_working,0.16248393058776855,408,26
+The card I've got seems to be broken.,card_not_working,card_not_working,0.17746496200561523,413,26
+My card suddenly quit working.,card_not_working,card_not_working,0.3970468044281006,410,26
+The card I have doesn't work.,card_not_working,card_not_working,1.3012137413024902,411,43
+I have tried to use my card several times and it does not work.,card_not_working,card_not_working,0.13981008529663086,419,26
+How can I resolve a problem where my card won't go through at all?,card_not_working,card_not_working,1.4548611640930176,419,30
+My card appears to be broken how can I fix it?,card_not_working,card_not_working,0.1854572296142578,416,26
+How can I get my physical card to work?,card_not_working,card_not_working,0.5866403579711914,414,36
+How do I find out why my card won't work?,card_not_working,card_not_working,0.17950797080993652,415,26
+Can someone assist me by explaining why my card is not working?,card_not_working,card_not_working,0.4706234931945801,417,26
+How can i check if my card is working?,card_not_working,card_not_working,0.2110004425048828,414,56
+So what items  actually come  with  extra  fees,card_payment_fee_charged,card_payment_fee_charged,0.45433950424194336,416,70
+There is a fee on my account. Why?,card_payment_fee_charged,card_payment_fee_charged,0.26021337509155273,414,73
+I have been charged with a fee for paying with my card.,card_payment_fee_charged,card_payment_fee_charged,0.1526496410369873,417,34
+Is using my card free?,card_payment_fee_charged,card_payment_fee_charged,0.31986403465270996,410,65
+There is an unauthorized fee.,card_payment_fee_charged,card_payment_fee_charged,0.25153017044067383,410,57
+I was charged a fee after using my card and I shouldn't have been.,card_payment_fee_charged,card_payment_fee_charged,0.3867197036743164,419,30
+Why are there fees for card usage?,card_payment_fee_charged,card_payment_fee_charged,0.5371732711791992,412,30
+I used my card for a purchase and was charged a fee,card_payment_fee_charged,card_payment_fee_charged,0.18445420265197754,416,30
+Why was I charged an extra fee when using a card?,card_payment_fee_charged,card_payment_fee_charged,0.6340947151184082,416,30
+Will I always be charged a fee for using my card?,card_payment_fee_charged,card_payment_fee_charged,1.310471773147583,416,57
+I have been charged a fee for paying with card,card_payment_fee_charged,card_payment_fee_charged,0.1732938289642334,414,34
+Why did I have to pay extra because I paid with card?,card_payment_fee_charged,card_payment_fee_charged,0.487823486328125,417,30
+Why did I have to pay more when I do it with my card?,card_payment_fee_charged,card_payment_fee_charged,0.22993826866149902,419,31
+Why would I be charged a fee for card payment?,card_payment_fee_charged,card_payment_fee_charged,2.3452587127685547,415,47
+Someone needs to make me aware when there are extra charges for payments. I happened to be looking at the app earlier and noticed a charge associated to a payment that was extra that no one made me aware of before at all.,card_payment_fee_charged,card_payment_fee_charged,0.19420576095581055,449,36
+I was charged a fee for a card payment. Why?,card_payment_fee_charged,card_payment_fee_charged,0.26898622512817383,416,34
+"I show another charge on my card from when I used it, why?",card_payment_fee_charged,card_payment_fee_charged,0.1965656280517578,419,50
+I made a card payment and a fee is showing up?,card_payment_fee_charged,card_payment_fee_charged,0.23334479331970215,416,30
+For the first time I got a fee on my account. How do I know when you charge these fees?,card_payment_fee_charged,card_payment_fee_charged,0.2854726314544678,426,75
+What is the fee on my card payment?,card_payment_fee_charged,card_payment_fee_charged,0.3958089351654053,413,31
+Why doesn't the card payment work,declined_card_payment,card_not_working,1.4126617908477783,410,37
+"I have a card payment that was declined, but why?",declined_card_payment,declined_card_payment,0.26464247703552246,416,29
+I don't know why my payment didn't work.,declined_card_payment,declined_card_payment,1.987842321395874,413,42
+The new card that was just sent to me was declined multiple times yesterday when I tried to use it at a restaurant to pay for my dinner.  I am really disappointed  and embarrassed that my card was denied when I tried to use it to pay for my friend's birthday dinner.,declined_card_payment,declined_card_payment,0.4606907367706299,460,50
+I know I have enough funds in my account but my card payment hasn't worked for some reason. What do I do?,declined_card_payment,declined_card_payment,5.374974250793457,428,68
+Do you know why my card payment did not work?,declined_card_payment,declined_card_payment,10.007363319396973,415,25
+I was trying to purchase something at the store today and my card has been declined.  Why has this happened?,declined_card_payment,declined_card_payment,4.067880153656006,427,33
+I'm really stuck. I don't know why but my card payment has not gone through.,declined_card_payment,declined_card_payment,0.47564172744750977,421,25
+My card was not accepted.,declined_card_payment,card_not_working,0.34519529342651367,410,33
+"My card payment didn't work, can you help?",declined_card_payment,declined_card_payment,1.0251307487487793,414,55
+My card payment did not complete.,declined_card_payment,declined_card_payment,0.6071438789367676,411,50
+Something is wrong with my payment account since it has been declined,declined_card_payment,declined_card_payment,0.6142411231994629,416,54
+My new card keeps getting declined. I was very excited to use it for the first time today. Why is this doing this?,declined_card_payment,declined_card_payment,0.5274224281311035,430,28
+"I was out today looking forward to pay with my new card, turns out the payment just kept getting declined. This is really sad, what's going on?",declined_card_payment,declined_card_payment,6.406052589416504,435,25
+My card payment did not work.,declined_card_payment,declined_card_payment,6.650083541870117,411,61
+"Hello, I am facing the issue with my new card as payments are declining again and again. Please help me in this issue.",declined_card_payment,declined_card_payment,1.1471943855285645,430,43
+"My payment has been declined, I thought this issue was fixed!",declined_card_payment,declined_card_payment,2.4045631885528564,417,38
+Why is my debit card being declined when I have money?,declined_card_payment,declined_card_payment,0.18654561042785645,416,25
+My card declined,declined_card_payment,declined_card_payment,0.3013284206390381,407,30
+Why do you keep declining my payment? I tried several times already with this card and it's just not working,declined_card_payment,declined_card_payment,0.43633103370666504,425,25
+How do your exchange rates work?,exchange_rate,exchange_rate,2.2693190574645996,411,26
+Is it a good time to exchange?,exchange_rate,exchange_rate,0.5020456314086914,412,46
+Will I get a curreng foreign exchange rate?,exchange_rate,exchange_rate,1.0117285251617432,414,47
+what are exchange rates based on,exchange_rate,exchange_rate,6.4314563274383545,410,26
+How often do your exchange rates change,exchange_rate,exchange_rate,0.18816685676574707,411,35
+Can you explain your exchange rate policy to me?,exchange_rate,exchange_rate,0.3935239315032959,414,26
+Please advise what is the exchange rate,exchange_rate,exchange_rate,0.18328189849853516,411,26
+What do you base your exchange rates on?,exchange_rate,exchange_rate,0.18165278434753418,413,26
+when does the rate get determined,exchange_rate,exchange_rate,1.3330802917480469,410,45
+Do you have a list of exchange rates?,exchange_rate,exchange_rate,0.2267608642578125,413,26
+What is the exchange rate like on this app?,exchange_rate,exchange_rate,0.1839599609375,414,26
+How much will I get with the exchange rate?,exchange_rate,exchange_rate,0.20421218872070312,414,35
+How are exchange rates calculated?,exchange_rate,exchange_rate,3.1087398529052734,410,26
+what is the exchange rate?,exchange_rate,exchange_rate,0.1723017692565918,410,26
+What exchange rate do you use?,exchange_rate,exchange_rate,0.2583200931549072,411,26
+The exchange rate would be?,exchange_rate,exchange_rate,0.39756178855895996,410,43
+Where do you get your exchange rates from?,exchange_rate,exchange_rate,0.12881135940551758,413,26
+From where are you getting your exchange rates?,exchange_rate,exchange_rate,0.24382519721984863,413,26
+How are you determining your exchange rates?,exchange_rate,exchange_rate,0.1583707332611084,412,26
+What foreign exchange rate will you use?,exchange_rate,exchange_rate,0.6545908451080322,412,34
+"Someone stole my wallet earlier today, not sure exactly when, probably on Piccadilly circus. Can you check if there were any attempts to use the card and obviously block it?",lost_or_stolen_card,lost_or_stolen_card,0.18386316299438477,440,31
+I lost my wallet today with all my credit cards. Will you please block the card and send a replacement?,lost_or_stolen_card,lost_or_stolen_card,0.3738715648651123,426,28
+My card is gone I think it was stolen,lost_or_stolen_card,lost_or_stolen_card,1.0319955348968506,413,32
+I lost my card,lost_or_stolen_card,lost_or_stolen_card,0.22009944915771484,408,24
+Help me please!  My card was stolen!,lost_or_stolen_card,lost_or_stolen_card,0.5450713634490967,414,32
+"I cant find my card, it's gone.",lost_or_stolen_card,lost_or_stolen_card,0.49772214889526367,413,28
+Is a copy of the police report necessary for completing the report process?,lost_or_stolen_card,lost_or_stolen_card,2.78088116645813,418,66
+"I believe my card has been stolen, what can I do about this situation? It's urgent.",lost_or_stolen_card,lost_or_stolen_card,1.5050079822540283,423,32
+Somehow I am missing my card.  What should I do?,lost_or_stolen_card,lost_or_stolen_card,0.30625391006469727,417,28
+My bags were stolen. I need a new card but need to cancel the stolen one.,lost_or_stolen_card,lost_or_stolen_card,0.2045431137084961,422,32
+I think my card was stolen.,lost_or_stolen_card,lost_or_stolen_card,0.1314709186553955,411,32
+Help! Someone stole my card!,lost_or_stolen_card,lost_or_stolen_card,0.2356271743774414,411,32
+Some idiot stole my card.,lost_or_stolen_card,lost_or_stolen_card,2.4008569717407227,410,32
+"Somebody has stolen my card, I need help please.",lost_or_stolen_card,lost_or_stolen_card,0.7571759223937988,415,35
+My card got lost.,lost_or_stolen_card,lost_or_stolen_card,1.2809364795684814,409,32
+My card is lost! What can I do?,lost_or_stolen_card,lost_or_stolen_card,0.22071290016174316,414,28
+How do I report my card stolen?,lost_or_stolen_card,lost_or_stolen_card,0.45335936546325684,412,28
+Are you able to locate my card?,lost_or_stolen_card,card_arrival,0.42788100242614746,412,40
+I believe my credit card was stolen.,lost_or_stolen_card,lost_or_stolen_card,0.23696613311767578,412,35
+I can't find my card and think it may have been stolen.,lost_or_stolen_card,lost_or_stolen_card,1.3302652835845947,417,32
+What does a pending transaction mean?,pending_card_payment,pending_card_payment,2.349010944366455,411,35
+"I have waited 15 days, but my payment still hasn't cleared.",pending_card_payment,pending_card_payment,0.32254862785339355,418,57
+How long does it take for a payment to go thru? I made one a few days ago and it has not been cleared yet.,pending_card_payment,pending_card_payment,0.32698655128479004,431,39
+My card payment is showing pending.,pending_card_payment,pending_card_payment,0.27932024002075195,411,28
+Why is my card payment showing as pending?,pending_card_payment,pending_card_payment,0.8387575149536133,413,28
+I bought some things this morning but the payment shows that it is pending,pending_card_payment,pending_card_payment,0.26337528228759766,418,24
+Explain what the pending payment means?,pending_card_payment,pending_card_payment,0.5295519828796387,411,48
+When will my card payment be done pending?,pending_card_payment,pending_card_payment,0.16675305366516113,413,24
+What is a pending payment?,pending_card_payment,pending_card_payment,0.2651028633117676,410,45
+Why has my payment not gone through?,pending_card_payment,declined_card_payment,1.4296252727508545,412,54
+Why is there a pending transaction on my card?,pending_card_payment,pending_card_payment,0.15722250938415527,414,24
+I made this payment days ago so why hasn't it gone through yet?,pending_card_payment,pending_card_payment,0.8310999870300293,418,52
+I am seeing pending from the card payment I made.,pending_card_payment,pending_card_payment,1.448998212814331,415,24
+I am waiting for a payment to go through.,pending_card_payment,pending_card_payment,0.7631015777587891,414,64
+Why is a payment showing up on my card as pending?,pending_card_payment,pending_card_payment,0.971574068069458,416,24
+"I was double charged, and the second charge is showing as ""pending"". How long will it be before I get my money back once the second charge has been refunded?",pending_card_payment,pending_card_payment,0.1871201992034912,438,51
+Please help me to know the status of my card payment as its pending since a while.,pending_card_payment,pending_card_payment,1.27347731590271,422,24
+I have a pending payment from stuff I bought this morning.,pending_card_payment,pending_card_payment,0.16862797737121582,416,24
+My payment still hasn't processed!,pending_card_payment,pending_card_payment,0.42903923988342285,410,48
+Why are my payments showing pending?,pending_card_payment,pending_card_payment,0.19281911849975586,411,24
+My funding to my card didn't go through.,top_up_failed,top_up_failed,0.3209817409515381,413,43
+I topped up but the app did not accept it.,top_up_failed,top_up_failed,0.1562352180480957,415,24
+"Heyy I tried to top up with my card today but it failed! I just got the couple days before but it has worked last time. What's going on, can you double check please?",top_up_failed,top_up_failed,1.6340618133544922,443,28
+Why didn`t my topup go through?,top_up_failed,top_up_failed,0.30069994926452637,413,24
+My top up was denied in the app.,top_up_failed,top_up_failed,0.16705012321472168,413,24
+How can I check to see if my top-up worked?,top_up_failed,top_up_failed,0.4103834629058838,416,69
+My top-up isn't working.,top_up_failed,top_up_failed,0.4213287830352783,410,39
+"I really need money from my card today, but my card is getting declined. Please help!!",top_up_failed,declined_card_payment,0.4488809108734131,423,25
+Why caused my top up to not work?,top_up_failed,top_up_failed,1.1770246028900146,413,38
+why isnt top up working,top_up_failed,top_up_failed,10.477699518203735,409,39
+I think my top up did not work,top_up_failed,top_up_failed,0.2225196361541748,412,44
+The app won't let me top up my account,top_up_failed,top_up_failed,0.6597738265991211,413,40
+Can you tell me if my pop-up went through?,top_up_failed,top_up_failed,0.706761360168457,415,100
+The app denied my topped up.,top_up_failed,top_up_failed,0.4381892681121826,411,45
+My top up failed.,top_up_failed,top_up_failed,0.15794944763183594,409,22
+I attempted to top up but the app denied it.,top_up_failed,top_up_failed,0.7232623100280762,415,24
+I'm not sure why my top up request was denied,top_up_failed,top_up_failed,0.4378030300140381,414,35
+What reason did my top-up fail for?,top_up_failed,top_up_failed,0.34827613830566406,413,24
+How did my top-up fail?,top_up_failed,top_up_failed,4.0719313621521,411,37
+please tell me why my top-up failed.,top_up_failed,top_up_failed,12.271166324615479,413,28
+I tried to send someone money but they haven't received it.,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.619318962097168,416,30
+Where is the transfer I started?,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.6622307300567627,411,96
+"Hey, I need some help figuring out way my transfer is not complete yet. My Landlord hasn't got the money yet.She should have received it by now.",transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.802715539932251,436,33
+Where is the transaction I made to a friend?,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.5820999145507812,414,47
+How long does it take for a transfer to get to a recipient?,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.5742204189300537,418,31
+I transferred some money but the recipient is having trouble withdrawing.,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.350841760635376,416,33
+"I just finished sending money, but it's not logging on the recipient side.",transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.3628542423248291,419,33
+"How long does it take for transfers to finish?  I sent funds to my pal, and she says that she has not gotten anything.",transfer_not_received_by_recipient,transfer_not_received_by_recipient,1.8610756397247314,432,33
+Is there a reason why my transaction is taking so long?,transfer_not_received_by_recipient,transfer_not_received_by_recipient,1.1431405544281006,416,65
+I sent money.  They haven't received it.,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.4884636402130127,414,30
+I made a transaction and it is taking a very long time to go through.,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.6581988334655762,420,85
+The person I sent money to hasn't gotten it yet!,transfer_not_received_by_recipient,transfer_not_received_by_recipient,1.3340799808502197,415,30
+I completed a money transaction but the recipient hasn't received it,transfer_not_received_by_recipient,transfer_not_received_by_recipient,1.4406852722167969,415,34
+"I've just moved address from a place in Durham to a place in Walton-On-The-Naze.  I have a new landlord at my new house and they haven't got my payment but I know I sent it on time, can you check they got it please?",transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.8903820514678955,456,43
+I made a money transaction but the recipient can't see it,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.5753748416900635,415,30
+How long will it take for my transaction to be completed?,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.3001542091369629,416,80
+Why hasn't my recipient received their money?,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.17369771003723145,412,30
+transaction failed?,transfer_not_received_by_recipient,declined_card_payment,0.8401584625244141,407,82
+I need to find out why my transfer didn't get there.,transfer_not_received_by_recipient,transfer_not_received_by_recipient,0.18468260765075684,416,31
+I am still awaiting the completion of the transaction.,transfer_not_received_by_recipient,pending_card_payment,0.8510916233062744,414,63
